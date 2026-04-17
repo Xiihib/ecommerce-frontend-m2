@@ -1,0 +1,219 @@
+body {
+    background: radial-gradient(circle, #121212, #0b0b0b);
+    ;
+    color: white;
+    /* Texto general en blanco para que resalte */
+}
+
+.navbar {
+    background-color: #0b0b0b;
+    border-bottom: 1px solid;
+    /* Necesitas definir un grosor */
+    border-image: linear-gradient(to right, transparent, #ff0000, transparent) 1;
+
+}
+
+.btn-primary {
+    background-color: #7a1c1c;
+    border: none;
+}
+
+/* Paleta de colores personalizada */
+:root {
+    --sangre: #7a1c1c;
+    /* Rojo vino profundo */
+    --ceniza: #999999;
+    /* Gris medio para textos secundarios */
+    --oro-oscuro: #c9a441;
+    /* Dorado para detalles importantes */
+}
+
+/* Clase para el color Sangre */
+.texto-sangre {
+    color: var(--sangre) !important;
+}
+
+/* Clase para el color Ceniza (ideal para el subtítulo de Platino IV) */
+.texto-ceniza {
+    color: var(--ceniza) !important;
+
+
+}
+
+/* Estilo para el Aside (Fechas) para que no sea blanco brillante */
+aside.bg-light {
+    background-color: #1a1a1a !important;
+    /* Gris muy oscuro */
+    color: white;
+    border: 1px solid var(--sangre);
+}
+
+
+/* Fondo navbar */
+
+.custom-navbar {
+    background-color: #0b0b0b;
+    /* negro profundo */
+    border-bottom: 1px solid #1f1f1f;
+}
+
+/* Marca (logo texto) */
+.navbar-brand {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 25px;
+    color: #c9a441 !important;
+    transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.2s;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8), 0 0 10px rgba(0,0,0,0.5)
+}
+
+/* Efecto hover sutil */
+.navbar-brand:hover {
+    color: #e9af0e !important;
+    text-shadow: 0 0 12px 2px rgba(136, 108, 6, 0.5);
+}
+
+/* Links */
+.nav-link {
+    color: #c0c0c0 !important;
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 14px;
+    margin-left: 13px;
+    transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+/* Hover links */
+.nav-link:hover {
+    color: #ff4d4d !important;
+    text-shadow: 0 0 8px #a10404;
+}
+
+/* Link activo */
+.nav-link.active {
+    color: #c0c0c0 !important;
+    border-bottom: 2px solid #e50914;
+}
+
+.active {
+    border-bottom: 1px solid;
+    /* Necesitas definir un grosor */
+    border-image: linear-gradient(to right, transparent, #ff0000, transparent) 1;
+}
+
+/* Navbar */
+
+
+
+.arc-hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('../img/fondo.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-size: cover;
+    /* La imagen cubre todo el espacio */
+    background-position: center;
+    /* Centra la imagen */
+    height: 300px;
+    /* Ajusta la altura a tu gusto */
+    display: flex;
+    align-items: center;
+    /* Centra el contenido verticalmente */
+    justify-content: center;
+    /* Centra el contenido horizontalmente */
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center bottom, rgba(201, 168, 76, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero-eyebrow {
+    font-family: 'Cinzel Decorative ';
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease 0.3s forwards;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero-title {
+    
+    font-family: 'Cinzel Decorative';
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    color: var(--arc-ivory);
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation:fadeInUp 0.9s ease 0.5s forwards;
+    text-transform: uppercase;
+    /* El truco del degradado: */
+    background: linear-gradient(
+        to bottom, 
+        #cca402 0%,    /* Oro base */
+        #ac944e 45%,   /* Brillo central sutil */
+        #8a6d3b 55%,   /* Sombra de metal oxidado */
+        #7c5e23 100%   /* Base oscura */
+    );
+    /* Esto hace que el degradado solo se vea dentro de las letras */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* Un toque de relieve para que parezca grabado */
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.8));
+    
+}
+
+.hero-title em {
+    font-style: italic;
+    color: var(--arc-gold);
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 400;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    
+    
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    opacity: 0;
+    animation: fadeInUp 0.9s ease 0.7s forwards;
+
+    color: #d1d1d1; /* Un gris ceniza suave */
+    font-family: 'Crimson Text', serif; /* O una fuente con serifa elegante */
+    font-style: italic; /* La cursiva le da un toque de narración antigua */
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9); /* Sombra para que no se pierda en el fondo */
+    max-width: 600px; /* Para que el texto no se estire demasiado a lo ancho */
+    margin: 0 auto;
+    
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

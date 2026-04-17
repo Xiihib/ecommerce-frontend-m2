@@ -1,0 +1,80 @@
+        body {
+            background-color: #0f0f0f; /* Fondo oscuro profundo */
+            color: #e0d5c0; /* Color crema antiguo */
+            font-family: 'EB Garamond', serif;
+        }
+
+        h1, h2, .cart-title {
+            font-family: 'Cinzel', serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #c4a47c; /* Dorado apagado/bronce */
+        }
+
+        .cart-container {
+            background: rgba(20, 20, 20, 0.9);
+            border: 1px solid #3d352a;
+            padding: 30px;
+            border-radius: 4px;
+            margin-top: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        /* Estilo de la Tabla */
+        .table {
+            color: #e0d5c0;
+            border-color: #3d352a;
+        }
+
+        .table thead {
+            font-family: 'Cinzel', serif;
+            border-bottom: 2px solid #c4a47c;
+        }
+
+        .product-img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border: 1px solid #c4a47c;
+        }
+
+        /* Botones Épicos */
+        .arc-btn-primary {
+            background-color: #631010; /* Rojo Sangre */
+            color: white;
+            border: 1px solid #8b1a1a;
+            font-family: 'Cinzel', serif;
+            padding: 10px 25px;
+            transition: all 0.3s;
+        }
+
+        .arc-btn-primary:hover {
+            background-color: #8b1a1a;
+            color: #ffd700;
+            box-shadow: 0 0 15px rgba(139, 26, 26, 0.4);
+        }
+
+        .btn-outline-gold {
+            color: #c4a47c;
+            border: 1px solid #c4a47c;
+            font-family: 'Cinzel', serif;
+        }
+
+        .btn-outline-gold:hover {
+            background-color: #c4a47c;
+            color: #1a1a1a;
+        }
+
+        .quantity-control {
+            background: transparent;
+            border: 1px solid #3d352a;
+            color: #e0d5c0;
+            text-align: center;
+            width: 50px;
+        }
+
+        .summary-box {
+            background: #1a1a1a;
+            border: 1px solid #c4a47c;
+            padding: 20px;
+        }
