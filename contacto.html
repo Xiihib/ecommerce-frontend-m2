@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacto - Sangre y Ceniza">
+    <title>Enviar Mensajero - Sangre y Ceniza</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                <img src="../assets/img/hachaminimalista.png" alt="Logo Sangre y Ceniza" width="67" height="40" class="me-2">
+                Sangre y Ceniza
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">
+                            <i class="bi bi-house-door me-1"></i>La Gran Sala
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carrito.html">
+                            <i class="bi bi-cart3 me-1"></i>Botín de Guerra
+                            <span id="cart-count" class="badge cart-badge" style="display: none;">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contacto.html">
+                            <i class="bi bi-envelope me-1"></i>Enviar Mensajero
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h1 class="section-title">Enviar Mensajero</h1>
+                <p class="lead text-muted" style="font-family: 'EB Garamond', serif; font-style: italic;">
+                    ¿Tienes preguntas sobre nuestras reliquias? Envíanos tu mensaje
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- FORMULARIO DE CONTACTO -->
+            <div class="col-lg-8 mb-4">
+                <div class="detail-container">
+                    <form id="contactForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="nombre" class="form-label text-gold">
+                                    <i class="bi bi-person me-2"></i>Nombre Completo
+                                </label>
+                                <input type="text" class="form-control" id="nombre" required 
+                                       style="background: rgba(0,0,0,0.3); border-color: var(--marron-oscuro); color: var(--crema);">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label text-gold">
+                                    <i class="bi bi-envelope me-2"></i>Correo Electrónico
+                                </label>
+                                <input type="email" class="form-control" id="email" required
+                                       style="background: rgba(0,0,0,0.3); border-color: var(--marron-oscuro); color: var(--crema);">
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="asunto" class="form-label text-gold">
+                                <i class="bi bi-tag me-2"></i>Asunto
+                            </label>
+                            <select class="form-select" id="asunto" required
+                                    style="background: rgba(0,0,0,0.3); border-color: var(--marron-oscuro); color: var(--crema);">
+                                <option value="">Selecciona un asunto</option>
+                                <option value="consulta">Consulta sobre productos</option>
+                                <option value="pedido">Estado de pedido</option>
+                                <option value="devolucion">Devoluciones y cambios</option>
+                                <option value="colaboracion">Colaboraciones</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label text-gold">
+                                <i class="bi bi-chat-text me-2"></i>Mensaje
+                            </label>
+                            <textarea class="form-control" id="mensaje" rows="6" required
+                                      style="background: rgba(0,0,0,0.3); border-color: var(--marron-oscuro); color: var(--crema);"
+                                      placeholder="Cuéntanos cómo podemos ayudarte..."></textarea>
+                        </div>
+
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" id="aceptoTerminos" required>
+                            <label class="form-check-label text-muted" for="aceptoTerminos">
+                                Acepto los <a href="#" class="text-gold">términos y condiciones</a> y la 
+                                <a href="#" class="text-gold">política de privacidad</a>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn arc-btn-primary w-100">
+                            <i class="bi bi-send me-2"></i>Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- INFORMACIÓN DE CONTACTO -->
+            <div class="col-lg-4">
+                <div class="detail-container">
+                    <h3 class="text-gold mb-4">
+                        <i class="bi bi-geo-alt me-2"></i>Nuestra Forja
+                    </h3>
+                    
+                    <div class="mb-4">
+                        <h6 class="text-gold-oscuro mb-2">Dirección</h6>
+                        <p class="text-muted">
+                            Avenida de los Héroes 1066<br>
+                            Santiago, Chile
+                        </p>
+                    </div>
+
+                    <div class="mb-4">
+                        <h6 class="text-gold-oscuro mb-2">Teléfono</h6>
+                        <p class="text-muted">
+                            <i class="bi bi-telephone me-2"></i>+56 2 2345 6789
+                        </p>
+                    </div>
+
+                    <div class="mb-4">
+                        <h6 class="text-gold-oscuro mb-2">Email</h6>
+                        <p class="text-muted">
+                            <i class="bi bi-envelope me-2"></i>contacto@sangreyceniza.cl
+                        </p>
+                    </div>
+
+                    <div class="mb-4">
+                        <h6 class="text-gold-oscuro mb-2">Horario de Atención</h6>
+                        <p class="text-muted">
+                            Lunes a Viernes: 9:00 - 18:00<br>
+                            Sábado: 10:00 - 14:00<br>
+                            Domingo: Cerrado
+                        </p>
+                    </div>
+
+                    <div>
+                        <h6 class="text-gold-oscuro mb-3">Síguenos</h6>
+                        <div class="d-flex gap-2">
+                            <a href="#" class="social-icon">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="bi bi-twitter-x"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="bi bi-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PREGUNTAS FRECUENTES -->
+                <div class="detail-container mt-4">
+                    <h5 class="text-gold mb-3">
+                        <i class="bi bi-question-circle me-2"></i>Preguntas Frecuentes
+                    </h5>
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item bg-dark border-0 mb-2">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-dark text-gold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    ¿Hacen envíos internacionales?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body bg-dark text-muted">
+                                    Sí, enviamos a todo el mundo. Los tiempos de entrega varían según el destino.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item bg-dark border-0 mb-2">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-dark text-gold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    ¿Son piezas auténticas?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body bg-dark text-muted">
+                                    Son réplicas de grado museo fabricadas con técnicas tradicionales y materiales auténticos.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="arc-footer">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4">
+                    <p class="footer-brand">Sangre y Ceniza</p>
+                    <p class="footer-tagline">Forjando el Legado de los Antiguos</p>
+                    <p class="footer-desc">
+                        Desde 1987, rescatamos la esencia de las eras vikinga, sajona y normanda.
+                    </p>
+                </div>
+
+                <div class="col-lg-2 col-6">
+                    <h6 class="footer-heading">Navegación</h6>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">La Gran Sala</a></li>
+                        <li><a href="carrito.html">Botín de Guerra</a></li>
+                        <li><a href="contacto.html">Enviar Mensajero</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-6">
+                    <h6 class="footer-heading">Leyes del Reino</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Términos de Uso</a></li>
+                        <li><a href="#">Código de Privacidad</a></li>
+                        <li><a href="#">Tratados de Devolución</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4">
+                    <h6 class="footer-heading">Forja y Contacto</h6>
+                    <p class="footer-contact">
+                        <i class="bi bi-geo-alt me-2"></i>Avenida de los Héroes 1066, Santiago, Chile
+                    </p>
+                    <p class="footer-contact">
+                        <i class="bi bi-telephone me-2"></i>+56 2 2345 6789
+                    </p>
+                    <p class="footer-contact">
+                        <i class="bi bi-envelope me-2"></i>contacto@sangreyceniza.cl
+                    </p>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+            
+            <p class="footer-copy text-center mb-0">
+                © 2026 SANGRE Y CENIZA — Honor y Acero.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!-- JavaScript personalizado -->
+    <script src="../assets/js/app.js"></script>
+    
+    <!-- Script para el formulario -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('¡Gracias por tu mensaje, guerrero! Te responderemos pronto.');
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>
