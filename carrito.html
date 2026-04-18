@@ -1,107 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tu carrito de compras - Sangre y Ceniza">
     <title>Botín de Guerra - Sangre y Ceniza</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cinzel+Decorative:wght@700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    <link href="assets/styles.css/styles2.css" rel="stylesheet" >
-    <style>
-        body {
-            background-color: #0f0f0f; /* Fondo oscuro profundo */
-            color: #e0d5c0; /* Color crema antiguo */
-            font-family: 'EB Garamond', serif;
-        }
-
-        h1, h2, .cart-title {
-            font-family: 'Cinzel', serif;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #c4a47c; /* Dorado apagado/bronce */
-        }
-
-        .cart-container {
-            background: rgba(20, 20, 20, 0.9);
-            border: 1px solid #3d352a;
-            padding: 30px;
-            border-radius: 4px;
-            margin-top: 50px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-
-        /* Estilo de la Tabla */
-        .table {
-            color: #e0d5c0;
-            border-color: #3d352a;
-        }
-
-        .table thead {
-            font-family: 'Cinzel', serif;
-            border-bottom: 2px solid #c4a47c;
-        }
-
-        .product-img {
-            width: 80px;
-            height: 80px;
-            object-fit: cover;
-            border: 1px solid #c4a47c;
-        }
-
-        /* Botones Épicos */
-        .arc-btn-primary {
-            background-color: #631010; /* Rojo Sangre */
-            color: white;
-            border: 1px solid #8b1a1a;
-            font-family: 'Cinzel', serif;
-            padding: 10px 25px;
-            transition: all 0.3s;
-        }
-
-        .arc-btn-primary:hover {
-            background-color: #8b1a1a;
-            color: #ffd700;
-            box-shadow: 0 0 15px rgba(139, 26, 26, 0.4);
-        }
-
-        .btn-outline-gold {
-            color: #c4a47c;
-            border: 1px solid #c4a47c;
-            font-family: 'Cinzel', serif;
-        }
-
-        .btn-outline-gold:hover {
-            background-color: #c4a47c;
-            color: #1a1a1a;
-        }
-
-        .quantity-control {
-            background: transparent;
-            border: 1px solid #3d352a;
-            color: #e0d5c0;
-            text-align: center;
-            width: 50px;
-        }
-
-        .summary-box {
-            background: #1a1a1a;
-            border: 1px solid #c4a47c;
-            padding: 20px;
-        }
-    </style>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
+
 <body>
 
-    <div class="container mb-5">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                <img src="../assets/img/hachaminimalista.png" alt="Logo Sangre y Ceniza" width="67" height="40" class="me-2">
+                Sangre y Ceniza
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">
+                            <i class="bi bi-house-door me-1"></i>La Gran Sala
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="carrito.html">
+                            <i class="bi bi-cart3 me-1"></i>Botín de Guerra
+                            <span id="cart-count" class="badge cart-badge" style="display: none;">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">
+                            <i class="bi bi-envelope me-1"></i>Enviar Mensajero
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="container mb-5">
         <div class="row">
             <div class="col-12 text-center mt-5">
-                <h1>Tu Botín de Guerra</h1>
-                <p class="lead italic text-muted">Revisa tus adquisiciones antes de partir a la batalla.</p>
+                <h1 class="section-title">Tu Botín de Guerra</h1>
+                <p class="lead text-muted" style="font-family: 'EB Garamond', serif; font-style: italic;">
+                    Revisa tus adquisiciones antes de partir a la batalla
+                </p>
             </div>
         </div>
 
         <div class="row cart-container">
+            <!-- TABLA DE PRODUCTOS -->
             <div class="col-lg-8">
                 <div class="table-responsive">
                     <table class="table align-middle">
@@ -111,42 +79,12 @@
                                 <th>Descripción</th>
                                 <th>Cantidad</th>
                                 <th>Precio</th>
+                                <th>Subtotal</th>
                                 <th></th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <img src="../assets/img/hacha.jpg" alt="Hacha" class="product-img">
-                                </td>
-                                <td>
-                                    <span class="d-block fw-bold cart-title">Hacha de Barba Grabada</span>
-                                    <small class="text-muted">Acero al carbono / Fresno</small>
-                                </td>
-                                <td>
-                                    <input type="number" value="1" class="quantity-control">
-                                </td>
-                                <td>$85.000</td>
-                                <td>
-                                    <a href="#" class="text-danger"><i class="bi bi-trash"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <img src="../assets/img/casco.jpg" alt="Yelmo" class="product-img">
-                                </td>
-                                <td>
-                                    <span class="d-block fw-bold cart-title">Yelmo Vikingo Gjermundbu</span>
-                                    <small class="text-muted">Acero Forjado</small>
-                                </td>
-                                <td>
-                                    <input type="number" value="1" class="quantity-control">
-                                </td>
-                                <td>$120.000</td>
-                                <td>
-                                    <a href="#" class="text-danger"><i class="bi bi-trash"></i></a>
-                                </td>
-                            </tr>
+                        <tbody id="cart-items">
+                            <!-- Los items del carrito se cargarán dinámicamente -->
                         </tbody>
                     </table>
                 </div>
@@ -155,33 +93,160 @@
                 </a>
             </div>
 
+            <!-- RESUMEN DEL PEDIDO -->
             <div class="col-lg-4 mt-4 mt-lg-0">
-                <div class="summary-box">
-                    <h3 class="cart-title mb-4">Resumen</h3>
+                <div class="summary-box" id="cart-summary">
+                    <h3 class="cart-title mb-4">Resumen del Pedido</h3>
+                    
                     <div class="d-flex justify-content-between mb-2">
                         <span>Subtotal:</span>
-                        <span>$205.000</span>
+                        <span id="subtotal">$0</span>
                     </div>
+                    
                     <div class="d-flex justify-content-between mb-2">
                         <span>Ofrenda de Envío:</span>
-                        <span>$5.000</span>
+                        <span id="envio">$5.000</span>
                     </div>
-                    <hr style="border-color: #c4a47c;">
+                    
+                    <hr style="border-color: var(--oro-oscuro);">
+                    
                     <div class="d-flex justify-content-between mb-4">
                         <span class="h5">Total:</span>
-                        <span class="h5 text-white">$210.000</span>
+                        <span class="h5 text-white" id="total">$0</span>
                     </div>
-                    <button class="btn arc-btn-primary w-100 py-3">
+                    
+                    <button class="btn arc-btn-primary w-100 py-3" id="btn-finalizar">
                         FINALIZAR TRATO <i class="bi bi-shield-shaded ms-2"></i>
                     </button>
+                    
                     <p class="text-center mt-3 text-muted small">
-                        <i class="bi bi-lock-fill"></i> Transacción protegida por el acero.
+                        <i class="bi bi-lock-fill"></i> Transacción protegida por el acero
                     </p>
+
+                    <!-- INFORMACIÓN ADICIONAL -->
+                    <div class="mt-4 pt-3 border-top" style="border-color: var(--marron-oscuro) !important;">
+                        <h6 class="text-gold mb-3">
+                            <i class="bi bi-truck me-2"></i>Información de Envío
+                        </h6>
+                        <ul class="list-unstyled text-muted small">
+                            <li class="mb-2">✓ Envío gratis en compras sobre $200.000</li>
+                            <li class="mb-2">✓ Entregas en 3-5 días hábiles</li>
+                            <li class="mb-2">✓ Empaque especial antiguo incluido</li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-3 pt-3 border-top" style="border-color: var(--marron-oscuro) !important;">
+                        <h6 class="text-gold mb-3">
+                            <i class="bi bi-award me-2"></i>Garantías
+                        </h6>
+                        <ul class="list-unstyled text-muted small">
+                            <li class="mb-2">✓ Certificado de autenticidad</li>
+                            <li class="mb-2">✓ Garantía de fabricación artesanal</li>
+                            <li class="mb-2">✓ Devolución en 30 días</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- MÉTODOS DE PAGO -->
+        <section class="mt-5">
+            <div class="row">
+                <div class="col-12">
+                    <div class="text-center p-4" style="background: rgba(20, 20, 20, 0.5); border: 1px solid var(--marron-oscuro); border-radius: 8px;">
+                        <h5 class="text-gold mb-3">
+                            <i class="bi bi-credit-card me-2"></i>Métodos de Pago Aceptados
+                        </h5>
+                        <div class="d-flex justify-content-center gap-3 flex-wrap">
+                            <span class="badge bg-dark px-3 py-2">
+                                <i class="bi bi-credit-card me-1"></i> Tarjetas de Crédito
+                            </span>
+                            <span class="badge bg-dark px-3 py-2">
+                                <i class="bi bi-bank me-1"></i> Transferencia Bancaria
+                            </span>
+                            <span class="badge bg-dark px-3 py-2">
+                                <i class="bi bi-paypal me-1"></i> PayPal
+                            </span>
+                            <span class="badge bg-dark px-3 py-2">
+                                <i class="bi bi-cash me-1"></i> Efectivo (Contraentrega)
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="arc-footer">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4">
+                    <p class="footer-brand">Sangre y Ceniza</p>
+                    <p class="footer-tagline">Forjando el Legado de los Antiguos</p>
+                    <p class="footer-desc">
+                        Desde 1987, rescatamos la esencia de las eras vikinga, sajona y normanda.
+                    </p>
+                </div>
+
+                <div class="col-lg-2 col-6">
+                    <h6 class="footer-heading">Navegación</h6>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">La Gran Sala</a></li>
+                        <li><a href="carrito.html">Botín de Guerra</a></li>
+                        <li><a href="contacto.html">Enviar Mensajero</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-6">
+                    <h6 class="footer-heading">Leyes del Reino</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Términos de Uso</a></li>
+                        <li><a href="#">Código de Privacidad</a></li>
+                        <li><a href="#">Tratados de Devolución</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4">
+                    <h6 class="footer-heading">Forja y Contacto</h6>
+                    <p class="footer-contact">
+                        <i class="bi bi-geo-alt me-2"></i>Avenida de los Héroes 1066, Santiago, Chile
+                    </p>
+                    <p class="footer-contact">
+                        <i class="bi bi-telephone me-2"></i>+56 2 2345 6789
+                    </p>
+                    <p class="footer-contact">
+                        <i class="bi bi-envelope me-2"></i>contacto@sangreyceniza.cl
+                    </p>
+                    
+                    <div class="footer-social mt-3">
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+            
+            <p class="footer-copy text-center mb-0">
+                © 2026 SANGRE Y CENIZA — Honor y Acero.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!-- JavaScript personalizado -->
+    <script src="../assets/js/app.js"></script>
 </body>
+
 </html>

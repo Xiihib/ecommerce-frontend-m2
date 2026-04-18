@@ -4,213 +4,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/styles.css/styles.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cinzel+Decorative:wght@700&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
-        rel="stylesheet" />
-
+    <meta name="description" content="Sangre y Ceniza - Tienda de réplicas vikingas, sajonas y normandas de grado museo. Armas, armaduras y accesorios medievales desde 1987.">
+    <title>Sangre y Ceniza - La Gran Sala</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
+    <!-- Bootstrap Icons -->
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-
 
 <body>
 
-    <nav>
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/img/hachaminimalista.png" alt="Logo" width="67" height="40"
-                        class="d-inline-block align-text-top">
-                    Sangre y Ceniza
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-link">
-                            <a class="nav-link active" aria-current="page" href="index.html">La Gran Sala</a>
-                        </li>
-                        <li class="nav-link">
-                            <a class="nav-link" href="carrito.html">Botín de Guerra</a>
-                        </li>
-                        <li class="nav-link">
-                            <a class="nav-link" href="#">Enviar Mensajero</a>
-                        </li>
-                    </ul>
-                </div>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/img/hachaminimalista.png" alt="Logo Sangre y Ceniza" width="67" height="40" class="me-2">
+                Sangre y Ceniza
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">
+                            <i class="bi bi-house-door me-1"></i>La Gran Sala
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carrito.html">
+                            <i class="bi bi-cart3 me-1"></i>Botín de Guerra
+                            <span id="cart-count" class="badge cart-badge" style="display: none;">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">
+                            <i class="bi bi-envelope me-1"></i>Enviar Mensajero
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </nav>
+        </div>
     </nav>
 
-
+    <!-- HERO SECTION -->
     <header class="arc-hero">
         <div class="hero-overlay"></div>
-        <div class="hero-particles" id="heroParticles"></div>
         <div class="container h-100 position-relative">
             <div class="row h-100 align-items-center justify-content-center text-center">
                 <div class="col-lg-8">
                     <p class="hero-eyebrow">✦ Colección Exclusiva ✦</p>
-                    <h1 class="hero-title">sajones <br><em>vikingos y normandos</em></h1>
-                    <p class="hero-subtitle">Cada pieza cuenta una historia de miles de años.<br>Traemos el pasado a
-                        tus manos.</p>
+                    <h1 class="hero-title">Sajones <br><em>Vikingos y Normandos</em></h1>
+                    <p class="hero-subtitle">
+                        Cada pieza cuenta una historia de miles de años.<br>
+                        Traemos el pasado a tus manos.
+                    </p>
                     <a href="#productos" class="btn arc-btn-primary mt-4">
                         Explorar Colección <i class="bi bi-arrow-down-circle ms-2"></i>
                     </a>
                 </div>
             </div>
         </div>
-
     </header>
 
-
+    <!-- MAIN CONTENT -->
     <main>
-        <section>
-            <article>
-                <div class="row row-cols-1 row-cols-md-3 g-4">
-
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="assets/img/amuleto.PNG" class="card-img-top" alt="Amuleto o colgante votivo.">
-                            <div class="card-body">
-                                <h5 class="card-title">Martillo de Thor - Mjolnir</h5>
-                                <p class="card-text">
-                                    Material: Plata de ley con pátina envejecida y cordón de cuero trenzado.
-                                    Descripción: Un símbolo de protección contra el caos, con intrincados entrelazados
-                                    que representan la fuerza del trueno.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="assets/img/axe.PNG" class="card-img-top" alt="Hacha de guerra danesa.">
-                            <div class="card-body">
-                                <h5 class="card-title">Hacha de Barba Grabada</h5>
-                                <p class="card-text">
-                                    Material: Cabeza de acero al carbono con grabados rúnicos y mango de fresno tallado.
-                                    Descripción: El diseño "barbudo" permite enganchar el escudo del oponente, siendo
-                                    una herramienta letal y versátil en el campo de batalla.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="assets/img/escudo.PNG" class="card-img-top" alt="Escudo redondo de infantería.">
-                            <div class="card-body">
-                                <h5 class="card-title">Escudo de Dracon</h5>
-                                <p class="card-text">Material: Madera de roble reforzada, umbo (centro) de hierro y
-                                    pintura a mano con motivos de dragones gemelos.
-                                    Descripción: El muro de escudos cobra vida con este diseño que combina ligereza para
-                                    el combate y arte tradicional vikingo.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="assets/img/espada.PNG" class="card-img-top"
-                                alt="Espada larga de un solo filo o Seax de lujo.">
-                            <div class="card-body">
-                                <h5 class="card-title">Espada Sajona de Acero Damasquino</h5>
-                                <p class="card-text">Material: Hoja de acero de Damasco (soldadura por patrón) y
-                                    empuñadura de madera de nogal con incrustaciones de granates.
-                                    Descripción: Una pieza de prestigio que muestra el patrón ondulado característico
-                                    del acero plegado, símbolo de estatus entre los sajones..</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="assets/img/healmet.PNG" class="card-img-top"
-                                alt="Casco de combate con anteojeras.">
-                            <div class="card-body">
-                                <h5 class="card-title">Yelmo Vikingo de Cresta</h5>
-                                <p class="card-text">Material: Acero forjado con detalles en latón y grabados de nudos
-                                    celtas.
-                                    Descripción: Inspirado en los hallazgos de Gjermundbu, este casco ofrece protección
-                                    facial completa y una estética de noble guerrero nórdico.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="assets/img/pasador.PNG" class="card-img-top" alt="Broche de capa o fíbula.">
-                            <div class="card-body">
-                                <h5 class="card-title">Fíbula de Penanular con Ámbar</h5>
-                                <p class="card-text">Material: Bronce dorado con incrustaciones de ámbar báltico
-                                    auténtico.
-
-                                    Descripción: Utilizada por normandos y sajones para sujetar capas pesadas, esta
-                                    pieza de joyería muestra la sofisticación de la orfebrería medieval.</p>
-                            </div>
-                        </div>
-                    </div>
-
-            </article>
-        </section>
-    </main>
-<footer class="arc-footer">
-    <div class="container">
-        <div class="row gy-4">
-            <div class="col-lg-4">
-                <p class="footer-brand">Sangre y Ceniza</p>
-                <p class="footer-tagline">Forjando el Legado de los Antiguos</p>
-                <p class="footer-desc">Desde 1987, rescatamos la esencia de las eras vikinga, sajona y normanda. Nuestras piezas no son simples réplicas, son fragmentos de historia traídos al presente.</p>
-            </div>
-
-            <div class="col-lg-2 col-6">
-                <h6 class="footer-heading">Navegación</h6>
-                <ul class="footer-links">
-                    <li><a href="index.html">La Gran Sala (Inicio)</a></li>
-                    <li><a href="carrito.html">Botín de Guerra (Carrito)</a></li>
-                    <li><a href="pages/contacto.html">Enviar Mensajero (Contacto)</a></li>
-                </ul>
-            </div>
-
-            <div class="col-lg-2 col-6">
-                <h6 class="footer-heading">Leyes del Reino</h6>
-                <ul class="footer-links">
-                    <li><a href="#">Términos de Uso</a></li>
-                    <li><a href="#">Código de Privacidad</a></li>
-                    <li><a href="#">Tratados de Devolución</a></li>
-                </ul>
-            </div>
-
-            <div class="col-lg-4">
-                <h6 class="footer-heading">Forja y Contacto</h6>
-                <p class="footer-contact"><i class="bi bi-geo-alt me-2"></i>Avenida de los Héroes 1066, Santiago, Chile</p>
-                <p class="footer-contact"><i class="bi bi-telephone me-2"></i>+56 2 2345 6789</p>
-                <p class="footer-contact"><i class="bi bi-envelope me-2"></i>contacto@sangreyceniza.cl</p>
+        <!-- SECCIÓN DE PRODUCTOS -->
+        <section id="productos" class="productos-section">
+            <div class="container">
+                <h2 class="section-title">Nuestro Arsenal</h2>
+                <p class="text-center mb-5 text-muted" style="font-family: 'EB Garamond', serif; font-size: 1.1rem;">
+                    Réplicas de grado museo fabricadas por maestros artesanos
+                </p>
                 
-                <div class="footer-social mt-3">
-                    <a href="#" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                    <a href="#" class="social-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                    <a href="#" class="social-icon" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                <article>
+                    <div id="productos-container" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                        <!-- Los productos se cargarán dinámicamente con JavaScript -->
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECCIÓN SOBRE NOSOTROS -->
+        <section class="py-5" style="background: rgba(122, 28, 28, 0.05);">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <h2 class="section-title text-start">Forjando el Legado</h2>
+                        <p style="font-family: 'EB Garamond', serif; font-size: 1.1rem; color: var(--ceniza); line-height: 1.8;">
+                            Desde <strong class="text-gold">1987</strong>, rescatamos la esencia de las eras vikinga, sajona y normanda. 
+                            Nuestras piezas no son simples réplicas, son fragmentos de historia traídos al presente.
+                        </p>
+                        <p style="font-family: 'EB Garamond', serif; font-size: 1.1rem; color: var(--ceniza); line-height: 1.8;">
+                            Cada arma, cada amuleto, cada pieza de armadura es creada por artesanos que han dedicado 
+                            su vida a perfeccionar técnicas ancestrales de forja y orfebrería.
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <i class="bi bi-hammer" style="font-size: 8rem; color: var(--oro-oscuro);"></i>
+                    </div>
                 </div>
             </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="arc-footer">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4">
+                    <p class="footer-brand">Sangre y Ceniza</p>
+                    <p class="footer-tagline">Forjando el Legado de los Antiguos</p>
+                    <p class="footer-desc">
+                        Desde 1987, rescatamos la esencia de las eras vikinga, sajona y normanda. 
+                        Nuestras piezas no son simples réplicas, son fragmentos de historia traídos al presente.
+                    </p>
+                </div>
+
+                <div class="col-lg-2 col-6">
+                    <h6 class="footer-heading">Navegación</h6>
+                    <ul class="footer-links">
+                        <li><a href="index.html">La Gran Sala</a></li>
+                        <li><a href="carrito.html">Botín de Guerra</a></li>
+                        <li><a href="contacto.html">Enviar Mensajero</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-6">
+                    <h6 class="footer-heading">Leyes del Reino</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Términos de Uso</a></li>
+                        <li><a href="#">Código de Privacidad</a></li>
+                        <li><a href="#">Tratados de Devolución</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4">
+                    <h6 class="footer-heading">Forja y Contacto</h6>
+                    <p class="footer-contact">
+                        <i class="bi bi-geo-alt me-2"></i>Avenida de los Héroes 1066, Santiago, Chile
+                    </p>
+                    <p class="footer-contact">
+                        <i class="bi bi-telephone me-2"></i>+56 2 2345 6789
+                    </p>
+                    <p class="footer-contact">
+                        <i class="bi bi-envelope me-2"></i>contacto@sangreyceniza.cl
+                    </p>
+                    
+                    <div class="footer-social mt-3">
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+            
+            <p class="footer-copy text-center mb-0">
+                © 2026 SANGRE Y CENIZA — Honor y Acero. <br>
+                <small>Todas nuestras piezas son réplicas de grado de museo fabricadas por maestros artesanos.</small>
+            </p>
         </div>
+    </footer>
 
-        <hr class="footer-divider" />
-        
-        <p class="footer-copy text-center mb-0">
-            © 2026 SANGRE Y CENIZA — Honor y Acero. <br>
-            <small>Todas nuestras piezas son réplicas de grado de museo fabricadas por maestros artesanos.</small>
-        </p>
-    </div>
-</footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+    <!-- JavaScript personalizado -->
+    <script src="assets/js/app.js"></script>
 </body>
 
 </html>

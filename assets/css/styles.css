@@ -1,0 +1,647 @@
+/* ============================================
+   SANGRE Y CENIZA - E-COMMERCE VIKINGO
+   Estilos principales con temática medieval
+   ============================================ */
+
+/* === VARIABLES DE COLOR === */
+:root {
+    --sangre: #7a1c1c;
+    --sangre-oscuro: #631010;
+    --sangre-claro: #8b1a1a;
+    --ceniza: #999999;
+    --oro: #c9a441;
+    --oro-oscuro: #c4a47c;
+    --bronce: #8a6d3b;
+    --negro: #0b0b0b;
+    --negro-profundo: #0f0f0f;
+    --gris-oscuro: #1a1a1a;
+    --crema: #e0d5c0;
+    --marron-oscuro: #3d352a;
+}
+
+/* === ESTILOS GENERALES === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle, #121212, var(--negro));
+    color: var(--crema);
+    font-family: 'EB Garamond', serif;
+    min-height: 100vh;
+}
+
+/* === NAVBAR === */
+.navbar {
+    background-color: var(--negro) !important;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to right, transparent, var(--sangre), transparent) 1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-brand {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.5rem;
+    color: var(--oro) !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #e9af0e !important;
+    text-shadow: 0 0 12px rgba(136, 108, 6, 0.5);
+}
+
+.navbar-brand img {
+    filter: drop-shadow(0 0 5px rgba(201, 164, 65, 0.3));
+}
+
+.nav-link {
+    color: #c0c0c0 !important;
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    margin-left: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #ff4d4d !important;
+    text-shadow: 0 0 8px #a10404;
+}
+
+.nav-link.active {
+    color: var(--crema) !important;
+    border-bottom: 2px solid var(--sangre);
+}
+
+/* Badge del carrito */
+.cart-badge {
+    background-color: var(--sangre) !important;
+    color: white;
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+    box-shadow: 0 0 10px rgba(122, 28, 28, 0.6);
+}
+
+/* === HERO SECTION === */
+.arc-hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('../img/fondo.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center bottom, rgba(201, 168, 76, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.hero-eyebrow {
+    font-family: 'Cinzel Decorative';
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease 0.3s forwards;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero-title {
+    font-family: 'Cinzel Decorative';
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeInUp 0.9s ease 0.5s forwards;
+    text-transform: uppercase;
+    background: linear-gradient(to bottom, #cca402 0%, #ac944e 45%, #8a6d3b 55%, #7c5e23 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.8));
+}
+
+.hero-title em {
+    font-style: italic;
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 400;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    opacity: 0;
+    animation: fadeInUp 0.9s ease 0.7s forwards;
+    color: #d1d1d1;
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* === BOTONES === */
+.arc-btn-primary {
+    background-color: var(--sangre-oscuro);
+    color: white;
+    border: 1px solid var(--sangre-claro);
+    font-family: 'Cinzel', serif;
+    padding: 0.75rem 2rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.arc-btn-primary:hover {
+    background-color: var(--sangre-claro);
+    color: #ffd700;
+    box-shadow: 0 0 15px rgba(139, 26, 26, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-outline-gold {
+    color: var(--oro-oscuro);
+    border: 1px solid var(--oro-oscuro);
+    font-family: 'Cinzel', serif;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-gold:hover {
+    background-color: var(--oro-oscuro);
+    color: var(--gris-oscuro);
+    transform: translateY(-2px);
+}
+
+/* === SECCIÓN DE PRODUCTOS === */
+.productos-section {
+    padding: 4rem 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+.section-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--oro);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* === CARDS DE PRODUCTOS === */
+.card {
+    background: rgba(20, 20, 20, 0.9);
+    border: 1px solid var(--marron-oscuro);
+    transition: all 0.3s ease;
+    height: 100%;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(201, 164, 65, 0.2);
+    border-color: var(--oro-oscuro);
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+.card-body {
+    background: rgba(15, 15, 15, 0.95);
+    color: var(--crema);
+}
+
+.card-title {
+    font-family: 'Cinzel', serif;
+    color: var(--oro-oscuro);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    font-family: 'EB Garamond', serif;
+    color: var(--ceniza);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.product-price {
+    font-family: 'Cinzel', serif;
+    color: var(--oro);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+/* === PÁGINA DE DETALLE === */
+.detail-container {
+    background: rgba(20, 20, 20, 0.9);
+    border: 1px solid var(--marron-oscuro);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.detail-img {
+    max-width: 100%;
+    border: 2px solid var(--oro-oscuro);
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.detail-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 2rem;
+    color: var(--oro);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.detail-description {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.1rem;
+    color: var(--crema);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.specs-list {
+    list-style: none;
+    padding: 0;
+}
+
+.specs-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--marron-oscuro);
+    font-family: 'EB Garamond', serif;
+    color: var(--ceniza);
+}
+
+.specs-list li strong {
+    color: var(--oro-oscuro);
+}
+
+/* === CARRITO === */
+.cart-container {
+    background: rgba(20, 20, 20, 0.9);
+    border: 1px solid var(--marron-oscuro);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.table {
+    color: var(--crema);
+    border-color: var(--marron-oscuro);
+    background-color: transparent !important;
+}
+
+.table thead {
+    font-family: 'Cinzel', serif;
+    border-bottom: 2px solid var(--oro-oscuro);
+    background: rgba(122, 28, 28, 0.2) !important;
+    
+}
+
+.table tbody tr {
+    border-bottom: 1px solid var(--marron-oscuro);
+    background-color: transparent !important;
+    background: #5D4037;
+}
+
+/* 1. Eliminar el fondo blanco de cualquier div dentro de la tabla del carrito */
+#cart-items .empty-cart {
+    background-color: transparent !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+/* 2. Asegurar que el icono no tenga fondo */
+#cart-items .empty-cart i {
+    background-color: transparent !important;
+    display: block;
+    margin-bottom: 15px;
+    color: #B5945F !important;
+
+}
+
+/* 3. Estilizar el texto para que sea legible sobre el fondo oscuro */
+#cart-items .empty-cart p {
+    color: #B5945F !important; /* El dorado que sugerí */
+    background-color: transparent !important;
+    font-family: 'EB Garamond', serif;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px black;
+}
+
+
+/* Estilo para el botón de explorar dentro del carrito vacío */
+.empty-cart .arc-btn-primary {
+    background-color: #630E0E !important; /* Rojo sangre oscuro */
+    color: #D2C1A5 !important;           /* Texto papiro/crema */
+    border: 1px solid #B5945F !important; /* Borde oro viejo */
+    padding: 12px 24px;
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+
+/* Efecto al pasar el mouse (Hover) */
+.empty-cart .arc-btn-primary:hover {
+    background-color: #8B0000 !important; /* Un rojo un poco más vivo */
+    color: #ffffff !important;
+    border-color: #D2C1A5 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Hacer que los textos de información y garantías sean legibles */
+.summary-box, 
+.cart-container {
+    color: var(--crema) !important;
+}
+
+.summary-box h4, 
+.summary-box h5,
+.summary-box p,
+.summary-box span,
+.summary-box div {
+    color: var(--crema) !important;
+}
+
+/* Específicamente para los iconos y textos de las listas de beneficios */
+.summary-box i, 
+.summary-box .text-muted, 
+.summary-box small {
+    color: var(--oro-oscuro) !important;
+    opacity: 1 !important;
+}
+
+.table tr,
+.table td,
+.table th {
+    
+        color: var(--oro);
+    background: #5D4037;
+    border-bottom: 1px solid var(--oro-oscuro);
+}
+
+.product-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 1px solid var(--oro-oscuro);
+    border-radius: 4px;
+}
+
+.quantity-control {
+    background: transparent;
+    border: 1px solid var(--marron-oscuro);
+    color: var(--crema);
+    text-align: center;
+    width: 60px;
+    padding: 0.25rem;
+    border-radius: 4px;
+}
+
+.quantity-control:focus {
+    outline: none;
+    border-color: var(--oro-oscuro);
+}
+
+.summary-box {
+    background: var(--gris-oscuro);
+    border: 1px solid var(--oro-oscuro);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.cart-title {
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--oro-oscuro);
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 3rem;
+    font-family: 'EB Garamond', serif;
+    font-size: 1.2rem;
+    color: var(--ceniza);
+}
+
+/* === FOOTER === */
+.arc-footer {
+    background: linear-gradient(180deg, rgba(11, 11, 11, 0.8) 0%, rgba(0, 0, 0, 0.95) 100%);
+    border-top: 1px solid;
+    border-image: linear-gradient(to right, transparent, var(--sangre), transparent) 1;
+    padding: 3rem 0 1.5rem;
+    margin-top: 4rem;
+}
+
+.footer-brand {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.5rem;
+    color: var(--oro);
+    margin-bottom: 0.5rem;
+}
+
+.footer-tagline {
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    color: var(--oro-oscuro);
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.footer-desc {
+    font-family: 'EB Garamond', serif;
+    color: var(--ceniza);
+    line-height: 1.6;
+}
+
+.footer-heading {
+    font-family: 'Cinzel', serif;
+    color: var(--oro-oscuro);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: var(--ceniza);
+    text-decoration: none;
+    font-family: 'EB Garamond', serif;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--oro);
+    padding-left: 5px;
+}
+
+.footer-contact {
+    color: var(--ceniza);
+    font-family: 'EB Garamond', serif;
+    margin-bottom: 0.5rem;
+}
+
+.footer-contact i {
+    color: var(--oro-oscuro);
+}
+
+.social-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid var(--oro-oscuro);
+    border-radius: 50%;
+    color: var(--oro-oscuro);
+    margin-right: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: var(--oro-oscuro);
+    color: var(--negro);
+    transform: translateY(-3px);
+}
+
+.footer-divider {
+    border-color: var(--marron-oscuro);
+    margin: 2rem 0;
+}
+
+.footer-copy {
+    font-family: 'EB Garamond', serif;
+    color: var(--ceniza);
+    font-size: 0.9rem;
+}
+
+/* === RESPONSIVO === */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .nav-link {
+        margin-left: 0;
+        padding: 0.5rem 0;
+    }
+
+    .detail-container {
+        padding: 1rem;
+    }
+
+    .cart-container {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .card-img-top {
+        height: 200px;
+    }
+
+    .product-price {
+        font-size: 1.2rem;
+    }
+}
+
+/* === UTILIDADES === */
+.text-gold {
+    color: var(--oro) !important;
+}
+
+.text-sangre {
+    color: var(--sangre) !important;
+}
+
+.bg-dark-custom {
+    background-color: var(--negro-profundo) !important;
+}
+
+.border-gold {
+    border-color: var(--oro-oscuro) !important;
+}
